@@ -14,5 +14,8 @@ fun Application.configureRouting() {
     install(Routing){
         chatSocket(roomController)
         getAllMessages(roomController)
+        get("/") {
+            call.respondText("Hello, KtorChat!")
+        }
     }
 }
